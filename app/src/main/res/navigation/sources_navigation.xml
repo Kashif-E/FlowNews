@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sources_navigation"
+    app:startDestination="@id/sourcesFragment">
+
+    <fragment
+        android:id="@+id/sourcesFragment"
+        android:name="io.infinity.newsapp.ui.fragment.SourcesFragment"
+        android:label="SourcesFragment" >
+        <action
+            android:id="@+id/action_sourcesFragment_to_newsFromSourceFragment"
+            app:destination="@id/newsFromSourceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFromSourceFragment"
+        android:name="io.infinity.newsapp.ui.fragment.NewsFromSourceFragment"
+        android:label="NewsFromSourceFragment" >
+        <argument
+            android:name="sourceId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_newsFromSourceFragment_to_articleDetailsFragment2"
+            app:destination="@id/articleDetailsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleDetailsFragment2"
+        android:name="io.infinity.newsapp.ui.fragment.ArticleDetailsFragment"
+        android:label="ArticleDetailsFragment" >
+        <argument
+            android:name="article"
+            app:argType="io.infinity.newsapp.model.domain.ArticleDomainModel" />
+    </fragment>
+</navigation>

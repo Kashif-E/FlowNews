@@ -1,0 +1,10 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <size
+        android:width="@dimen/_35sdp"
+        android:height="@dimen/_35sdp" />
+    <stroke
+        android:width="3dp"
+        android:color="@color/button_blue" />
+    <solid android:color="@color/button_blue" />
+</shape>

@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
+        </item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="colorControlActivated">@color/app_global_green</item>
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+        <item name="android:windowSoftInputMode">adjustNothing</item>
+        <item name="switchStyle">@style/Widget.MaterialComponents.CompoundButton.Switch</item>
+
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_corners</item>
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox
+        </item>
+    </style>
+
+    <!--bottom sheet theme-->
+
+
+    <style name="twelve_sp_muli_regular">
+        <item name="android:textSize">@dimen/eight_ssp</item>
+        <item name="android:fontFamily">@font/muli</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="eighteen_sp_muli_bold">
+        <item name="android:textSize">@dimen/eighteen_sp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="fourteen_sp_muli_bold">
+        <item name="android:textSize">@dimen/fourteen_ssp</item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="fourteen_sp_muli_extra_bold">
+        <item name="android:textSize">@dimen/fourteen_ssp</item>
+        <item name="android:fontFamily">@font/muli_extrabold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="twelve_sp_muli_extra_bold">
+        <item name="android:textSize">@dimen/twelve_sp</item>
+        <item name="android:fontFamily">@font/muli_extrabold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <!-- ///////////////////custom button style   //////////-->
+
+</resources>

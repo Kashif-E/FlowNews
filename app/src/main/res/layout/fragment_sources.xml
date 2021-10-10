@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="io.infinity.newsapp.viewmodels.SourcesViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar_sources"
+                layout="@layout/toolbar_home"
+                app:title="@{viewmodel.title}" />
+            <androidx.cardview.widget.CardView
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16sdp">
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searcView"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

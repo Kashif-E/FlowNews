@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#feb61f</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#2abaff</color>
+    <color name="black">#000</color>
+    <color name="semi_black">#30000000</color>
+    <color name="white">#ffffff</color>
+    <color name="app_global_green">#2DCC70</color>
+
+    <color name="light_blue">#027aff</color>
+    <color name="navy_blue">#1c2d41</color>
+    <color name="button_blue">#3498db</color>
+    <color name="semi_white">#F4F5F7</color>
+
+</resources>

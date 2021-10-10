@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">K-News</string>
+    <string name="the_news">The News</string>
+    <string name="top_headlines">Top Headlines</string>
+    <string name="explore">Explore</string>
+    <string name="home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="read_more">Read more</string>
+    <string name="sources">Sources</string>
+    <string name="headlines_from">Headlines from %s</string>
+    <string name="category">Category</string>
+    <string name="country">Country</string>
+    <string name="sort_by">Sort by</string>
+    <string name="search">Search</string>
+
+    <array name="countries">
+
+        <item>au</item>
+        <item>ae</item>
+        <item>ar</item>
+        <item>at</item>
+        <item>a</item>
+        <item>be</item>
+        <item>bg</item>
+        <item>br</item>
+        <item>ca</item>
+        <item>ch</item>
+        <item>cn</item>
+        <item>co</item>
+        <item>cu</item>
+        <item>cz</item>
+        <item>de</item>
+        <item>eg</item>
+        <item>fr</item>
+        <item>gb</item>
+        <item>gr</item>
+        <item>hk</item>
+        <item>hu</item>
+        <item>id</item>
+        <item>ie</item>
+        <item>il</item>
+        <item>in</item>
+        <item>it</item>
+        <item>jp</item>
+        <item>kr</item>
+        <item>lt</item>
+        <item>lv</item>
+        <item>ma</item>
+        <item>mx</item>
+        <item>my</item>
+        <item>ng</item>
+        <item>nl</item>
+        <item>no</item>
+        <item>nz</item>
+        <item>ph</item>
+        <item>pl</item>
+        <item>pt</item>
+        <item>ro</item>
+        <item>rs</item>
+        <item>ru</item>
+        <item>sa</item>
+        <item>se</item>
+        <item>sg</item>
+        <item>si</item>
+        <item>sk</item>
+        <item>th</item>
+        <item>tr</item>
+        <item>tw</item>
+        <item>ua</item>
+        <item>us</item>
+        <item>ve</item>
+        <item>za</item>
+    </array>
+    <array name="categories">
+        <item>business</item>
+        <item>entertainment</item>
+        <item>general</item>
+        <item>health</item>
+        <item>science</item>
+        <item>sports</item>
+        <item>technology</item>
+    </array>
+
+
+</resources>

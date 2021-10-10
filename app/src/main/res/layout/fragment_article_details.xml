@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="article"
+            type="io.infinity.newsapp.model.domain.ArticleDomainModel" />
+        <variable
+            name="viewModel"
+            type="io.infinity.newsapp.viewmodels.ArticleDetailsViewModel" />
+        <import type="android.view.View"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_generic"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="@{viewModel.isWebViewShowing() ?  View.INVISIBLE :View.VISIBLE  }"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="@dimen/_20sdp"
+                android:layout_margin="@dimen/_16sdp"
+                android:layout_height="250dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    loadImageFromUrl="@{article.urlToImage}"
+                    android:scaleType="centerCrop"/>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:id="@+id/textView"
+                style="@style/eighteen_sp_muli_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:text="@{article.title}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_16sdp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvAuthor"
+                    style="@style/twelve_sp_muli_extra_bold"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_marginStart="8dp"
+                    android:text="@{article.author}"
+                    android:textAllCaps="true"
+                    android:textColor="@color/semi_black"
+                    />
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvTitle"
+                    app:srcCompat="@drawable/circle_blue" />
+
+                <TextView
+                    android:id="@+id/tvSource"
+                    style="@style/twelve_sp_muli_extra_bold"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@{article.source.name}"
+                    android:textAllCaps="true"
+                    android:textColor="@color/semi_black"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+                <TextView
+                    android:id="@+id/publishedOn"
+                    android:gravity="end"
+                    style="@style/twelve_sp_muli_extra_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    setDateAndTime="@{article.publishedAt}"
+                    android:textAllCaps="true"
+                    android:textColor="@color/semi_black"
+                    />
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                style="@style/fourteen_sp_muli_bold"
+                android:text="@{article.description}"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="0dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvReadMore"
+                android:onClick="@{() -> viewModel.onReadMoreClicked()}"
+                android:layout_width="match_parent"
+                style="@style/twelve_sp_muli_regular"
+                android:text="@string/read_more"
+                android:textColor="@color/light_blue"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webView"
+            loadArticleInWeb="@{article.url}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="@{viewModel.isWebViewShowing() ? View.VISIBLE :View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="twelve_sp">12sp</dimen>
+    <dimen name="eighteen_sp">18sp</dimen>
+
+    <dimen name="fourteen_ssp">@dimen/_10ssp</dimen>
+    <dimen name="eight_ssp">@dimen/_8ssp</dimen>
+
+
+</resources>

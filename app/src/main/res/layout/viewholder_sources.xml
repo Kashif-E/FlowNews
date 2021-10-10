@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="source"
+            type="io.infinity.newsapp.model.domain.SourcesDomainModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        app:cardCornerRadius="@dimen/_55sdp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/app_global_green"
+        android:layout_height="200dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="2dp"
+            style="@style/eighteen_sp_muli_bold"
+            android:layout_gravity="center"
+            tools:text="austraukian news asddia "
+            android:layout_height="match_parent"
+            android:text="@{source.name}"/>
+
+    </androidx.cardview.widget.CardView>
+</layout>

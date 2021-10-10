@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/home_navgraph"
+        android:contentDescription="@string/home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+    <item android:title="@string/sources"
+        android:contentDescription="@string/sources"
+        android:icon="@drawable/ic_sources"
+        android:id="@+id/sources_navigation"
+        />
+    <item android:title="@string/search"
+        android:contentDescription="@string/search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:id="@+id/search_navigation"/>
+    <item android:title="Saved" />
+</menu>
